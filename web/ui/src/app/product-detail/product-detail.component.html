@@ -1,0 +1,31 @@
+<p>product-detail works!</p>
+<div *ngIf="product">
+  <div class="col-md-6">
+    <h2 class="text-center">Product Details</h2>
+    <form>
+      <div class="form-group">
+        <span>id: </span>{{product.id}}
+      </div>
+     
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="product.name" placeholder="Name" name="name" class="form-control" id="name">
+      </div>
+     
+      <div class="form-group">
+        <label for="lastName">Code:</label>
+       <input [(ngModel)]="product.code" placeholder="Code" name="code" class="form-control" id="code">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Description:</label>
+        <input type="email" [(ngModel)]="product.description" placeholder="description" name="description" class="form-control" id="description">
+      </div>
+
+      <div>
+        <button class="btn btn-success" (click)="updateProduct()">Update</button>&nbsp;&nbsp;
+        <button class="btn btn-success" (click)="goBack()">Back</button>
+      </div>
+    </form>
+  </div>
+</div>
